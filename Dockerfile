@@ -20,4 +20,5 @@ WORKDIR /app
 COPY poetry.lock pyproject.toml ./
 RUN poetry install --no-dev
 COPY . .
+EXPOSE 5000
 ENTRYPOINT ["poetry", "run", "python3", "bot.py"]
